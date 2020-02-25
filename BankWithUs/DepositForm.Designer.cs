@@ -37,56 +37,62 @@
             // 
             // ConfirmDepositBtn
             // 
-            this.ConfirmDepositBtn.Location = new System.Drawing.Point(240, 207);
+            this.ConfirmDepositBtn.Location = new System.Drawing.Point(90, 87);
+            this.ConfirmDepositBtn.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ConfirmDepositBtn.Name = "ConfirmDepositBtn";
-            this.ConfirmDepositBtn.Size = new System.Drawing.Size(272, 44);
+            this.ConfirmDepositBtn.Size = new System.Drawing.Size(102, 25);
             this.ConfirmDepositBtn.TabIndex = 9;
             this.ConfirmDepositBtn.Text = "Confirm Deposit";
             this.ConfirmDepositBtn.UseVisualStyleBackColor = true;
             // 
             // DepositAmountTxt
             // 
-            this.DepositAmountTxt.Location = new System.Drawing.Point(240, 125);
+            this.DepositAmountTxt.Location = new System.Drawing.Point(90, 52);
+            this.DepositAmountTxt.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.DepositAmountTxt.Name = "DepositAmountTxt";
-            this.DepositAmountTxt.Size = new System.Drawing.Size(272, 38);
+            this.DepositAmountTxt.Size = new System.Drawing.Size(104, 20);
             this.DepositAmountTxt.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 132);
+            this.label2.Location = new System.Drawing.Point(16, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 32);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Amount:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 54);
+            this.label1.Location = new System.Drawing.Point(14, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 32);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Deposit To:";
             // 
             // DepositToCBox
             // 
             this.DepositToCBox.FormattingEnabled = true;
-            this.DepositToCBox.Location = new System.Drawing.Point(240, 47);
+            this.DepositToCBox.Location = new System.Drawing.Point(90, 20);
+            this.DepositToCBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.DepositToCBox.Name = "DepositToCBox";
-            this.DepositToCBox.Size = new System.Drawing.Size(272, 39);
+            this.DepositToCBox.Size = new System.Drawing.Size(104, 21);
             this.DepositToCBox.TabIndex = 5;
             // 
             // DepositForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 291);
+            this.ClientSize = new System.Drawing.Size(226, 122);
             this.Controls.Add(this.ConfirmDepositBtn);
             this.Controls.Add(this.DepositAmountTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DepositToCBox);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "DepositForm";
             this.Text = "Deposit";
             this.ResumeLayout(false);
