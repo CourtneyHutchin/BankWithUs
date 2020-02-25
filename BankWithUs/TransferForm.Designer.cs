@@ -93,7 +93,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DepositToCBox);
             this.Name = "TransferForm";
-            this.Text = "TransferForm";
+            this.Text = "Transfer";
             this.ResumeLayout(false);
             this.PerformLayout();
 
