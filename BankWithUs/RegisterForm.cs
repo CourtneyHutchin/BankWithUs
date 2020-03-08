@@ -16,10 +16,5 @@ namespace BankWithUs
         {
             InitializeComponent();
         }
-
-        private void RegisterForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
