@@ -11,7 +11,7 @@ namespace BankWithUs
     /// This is the bank account class per user, all fields required for creation
     /// This uses Data Annotations taken from : https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netframework-4.8
     /// </summary>
-    class Account
+    public class Account
     {
         /// <summary>
         /// Key element for account, CustomerId
