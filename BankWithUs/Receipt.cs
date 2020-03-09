@@ -10,7 +10,7 @@ namespace BankWithUs
     /// <summary>
     /// Represents a single transaction
     /// </summary>
-    class Receipt
+    public class Receipt
     {
         /// <summary>
         /// Unique id for the receipt
