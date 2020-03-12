@@ -1,9 +1,9 @@
-namespace BankWithUs.Migrations
+﻿namespace BankWithUs.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddAccountsAndReceipt : DbMigration
+    public partial class AddedAccountsAndReceipts : DbMigration
     {
         public override void Up()
         {
@@ -13,12 +13,12 @@ namespace BankWithUs.Migrations
                     {
                         CustomerId = c.Int(nullable: false, identity: true),
                         AccountNum = c.Int(nullable: false),
-                        DebitNum = c.Int(nullable: false),
+                        DebitNum = c.String(nullable: false, maxLength: 16),
                         FirstName = c.String(nullable: false, maxLength: 50),
                         LastName = c.String(nullable: false, maxLength: 50),
                         Email = c.String(nullable: false),
-                        AccountPin = c.Int(nullable: false),
-                        PhoneNum = c.Int(nullable: false),
+                        AccountPin = c.String(nullable: false, maxLength: 4),
+                        PhoneNum = c.String(nullable: false),
                         Address = c.String(nullable: false),
                         CheckingAmount = c.Double(nullable: false),
                         SavingsAmount = c.Double(nullable: false),
@@ -31,8 +31,8 @@ namespace BankWithUs.Migrations
                     {
                         ReceiptId = c.Int(nullable: false, identity: true),
                         AccountNumber = c.Int(nullable: false),
-                        FirstName = c.String(nullable: false, maxLength: 15),
-                        LastName = c.String(nullable: false, maxLength: 15),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        LastName = c.String(nullable: false, maxLength: 50),
                         Amount = c.Double(nullable: false),
                         NewCheckingBalance = c.Double(nullable: false),
                         NewSavingsBalance = c.Double(nullable: false),
