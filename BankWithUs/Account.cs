@@ -26,8 +26,8 @@ namespace BankWithUs
         /// Required debitNum, validated same as a Credit Card
         /// </summary>
         [Required]
-        [CreditCard]
-        public int DebitNum { get; set; }
+        [StringLength(16)]
+        public string DebitNum { get; set; }
         
         [Required]
         [StringLength(50)]
@@ -48,15 +48,14 @@ namespace BankWithUs
         /// Account pin range may be adjusted but should be a four digit pin, min 4, max 4 digits
         /// </summary>
         [Required]
-        [Range(4, 4)]
-        public int AccountPin { get; set; }
+        [StringLength(4)]
+        public string AccountPin { get; set; }
 
         /// <summary>
         /// Phone number set as Phone validation
         /// </summary>
         [Required]
-        [Phone]
-        public int PhoneNum { get; set; }
+        public string PhoneNum { get; set; }
 
         [Required]
         public string Address { get; set; }
