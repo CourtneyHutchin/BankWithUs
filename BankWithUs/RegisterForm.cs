@@ -26,7 +26,7 @@ namespace BankWithUs
                 Account customer = new Account()
                 {
                     AccountNum = GenerateAccountNumber(),
-                    DebitNum = DebitCardNumTxt.Text,
+                    DebitNum = DebitCardNumTxt.Text.Replace("-", ""),
                     FirstName = FirstNameTxt.Text,
                     LastName = LastNameTxt.Text,
                     Email = EmailTxt.Text,
@@ -73,8 +73,11 @@ namespace BankWithUs
 
         private bool isDebitCardValid()
         {
+            //If user inputs hyphens in their debit card, remove it
+            string debitNumInput = DebitCardNumTxt.Text.Replace("-", "");
+
             long validLong;
-            if (DebitCardNumTxt.Text.Length == 16 && long.TryParse(DebitCardNumTxt.Text, out validLong) && DebitCardNumTxt.Text.All(char.IsDigit) == true)
+            if (debitNumInput.Length == 16 && long.TryParse(debitNumInput, out validLong) && debitNumInput.All(char.IsDigit) == true)
             {
                 return true;
             }
