@@ -81,7 +81,7 @@ namespace BankWithUs
             {
                 return true;
             }
-            MessageBox.Show("Debit card must be 16 digits in length without '-' or spaces");
+            MessageBox.Show("Debit card must be 16 digits in length");
             return false;
         }
 
