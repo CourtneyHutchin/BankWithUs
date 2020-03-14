@@ -61,6 +61,11 @@ namespace BankWithUs
             return false;
         }
 
+        /// <summary>
+        /// Makes sure the user provided a valid pin number
+        /// before being added to the database
+        /// </summary>
+        /// <returns></returns>
         private bool isPinNumberValid()
         {
             if (pinTxt.Text.Length == 4 && pinTxt.Text.All(char.IsDigit) == true)
@@ -71,6 +76,10 @@ namespace BankWithUs
             return false;
         }
 
+        /// <summary>
+        /// Makes sure the user provided a valid debit card number before adding it to the database
+        /// </summary>
+        /// <returns></returns>
         private bool isDebitCardValid()
         {
             //If user inputs hyphens in their debit card, remove it
@@ -85,6 +94,10 @@ namespace BankWithUs
             return false;
         }
 
+        /// <summary>
+        /// Makes sure the user prodived a valid phone number before adding it to the database
+        /// </summary>
+        /// <returns></returns>
         private bool isPhoneNumberValid()
         {
             long validLong;
@@ -96,6 +109,10 @@ namespace BankWithUs
             return false;
         }
 
+        /// <summary>
+        /// Makes sure the user provided a valid email address before adding it to the database
+        /// </summary>
+        /// <returns></returns>
         private bool isEmailValid()
         {
             if (EmailTxt.Text.Contains("@") && EmailTxt.Text.Contains("."))
@@ -106,6 +123,10 @@ namespace BankWithUs
             return false;
         }
 
+        /// <summary>
+        /// Makes sure the user meets the first deposit amount
+        /// </summary>
+        /// <returns></returns>
         private bool isFirstDepositValid()
         {
             double validDouble;
@@ -128,6 +149,10 @@ namespace BankWithUs
             }
         }
 
+        /// <summary>
+        /// Prevents the user from submitting an empty form
+        /// </summary>
+        /// <returns></returns>
         private bool isPresent()
         {
             if (!string.IsNullOrWhiteSpace(FirstNameTxt.Text) && !string.IsNullOrWhiteSpace(LastNameTxt.Text)
@@ -141,6 +166,10 @@ namespace BankWithUs
             return false;
         }
 
+        /// <summary>
+        /// Generates a random account number for the user when they meet all the requirements for registering
+        /// </summary>
+        /// <returns></returns>
         private int GenerateAccountNumber()
         {
             int minNum = 100000000;
