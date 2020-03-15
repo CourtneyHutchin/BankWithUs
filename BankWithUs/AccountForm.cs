@@ -12,9 +12,60 @@ namespace BankWithUs
 {
     public partial class AccountForm : Form
     {
-        public AccountForm()
+        // Field
+        private Account _user;
+
+        public AccountForm(Account userExist)
         {
             InitializeComponent();
+            _user = userExist;
+        }
+
+        private void DepositBtn_Click(object sender, EventArgs e)
+        {
+            DepositForm depositForm = new DepositForm();
+            depositForm.Show();
+        }
+
+        private void TransferBtn_Click(object sender, EventArgs e)
+        {
+            TransferForm transferForm = new TransferForm();
+            transferForm.Show();
+        }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            string logoutMsg = "Are you sure you want to logout?";
+
+            DialogResult result = MessageBox.Show(caption: "Logout?",
+                                                  text: logoutMsg,
+                                                  buttons: MessageBoxButtons.YesNo,
+                                                  icon: MessageBoxIcon.Question);
+
+            if(result == DialogResult.Yes)
+            {
+                string thankYou = "Thank you for banking with us!";
+
+                DialogResult exit = MessageBox.Show(caption: thankYou,
+                                                    text: thankYou,
+                                                    buttons: MessageBoxButtons.OK);
+
+                Close();
+
+            }
+        }
+
+        private void AccountForm_Load(object sender, EventArgs e)
+        {
+            // Calculate the total account balance
+            double totalBal = _user.CheckingAmount + _user.SavingsAmount;
+
+            AccountHolderInfoLbl.Text = _user.FirstName;
+            // Only grab the last four digits of the account number
+            AccountNumLbl.Text = _user.AccountNum.ToString().Substring(6, 4);
+            CheckingBalanceLbl.Text = "$" + _user.CheckingAmount.ToString();
+            SavingsBalanceLbl.Text = "$" + _user.SavingsAmount.ToString();
+            TotalBalanceLbl.Text = "$" + totalBal.ToString();
         }
     }
 }
