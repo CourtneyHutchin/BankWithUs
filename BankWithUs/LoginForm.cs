@@ -39,7 +39,7 @@ namespace BankWithUs
                         //Display a welcome message with their name
                         MessageBox.Show($"Welcome {userExist.FirstName} {userExist.LastName}");
 
-                        AccountForm accForm = new AccountForm();
+                        AccountForm accForm = new AccountForm(userExist);
                         accForm.ShowDialog();
 
                     }

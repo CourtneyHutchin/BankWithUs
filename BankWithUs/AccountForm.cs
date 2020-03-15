@@ -12,10 +12,13 @@ namespace BankWithUs
 {
     public partial class AccountForm : Form
     {
-        public AccountForm()
+        public AccountForm(Account userExist)
         {
             InitializeComponent();
         }
+
+        
+
 
         private void DepositBtn_Click(object sender, EventArgs e)
         {
