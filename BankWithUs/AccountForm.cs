@@ -57,12 +57,14 @@ namespace BankWithUs
 
         private void AccountForm_Load(object sender, EventArgs e)
         {
+            // Calculate the total account balance
             double totalBal = _user.CheckingAmount + _user.SavingsAmount;
 
             AccountHolderInfoLbl.Text = _user.FirstName;
-            AccountNumLbl.Text = _user.DebitNum;
-            CheckingBalanceLbl.Text = _user.CheckingAmount.ToString();
-            SavingsBalanceLbl.Text = _user.SavingsAmount.ToString();
+            // Only grab the last four digits of the account number
+            AccountNumLbl.Text = _user.AccountNum.ToString().Substring(6, 4);
+            CheckingBalanceLbl.Text = "$" + _user.CheckingAmount.ToString();
+            SavingsBalanceLbl.Text = "$" + _user.SavingsAmount.ToString();
             
             TotalBalanceLbl.Text = totalBal.ToString();
         }
