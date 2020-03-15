@@ -12,13 +12,14 @@ namespace BankWithUs
 {
     public partial class AccountForm : Form
     {
+        // Field
+        private Account _user;
+
         public AccountForm(Account userExist)
         {
             InitializeComponent();
+            _user = userExist;
         }
-
-        
-
 
         private void DepositBtn_Click(object sender, EventArgs e)
         {
@@ -52,6 +53,18 @@ namespace BankWithUs
                 Close();
 
             }
+        }
+
+        private void AccountForm_Load(object sender, EventArgs e)
+        {
+            double totalBal = _user.CheckingAmount + _user.SavingsAmount;
+
+            AccountHolderInfoLbl.Text = _user.FirstName;
+            AccountNumLbl.Text = _user.DebitNum;
+            CheckingBalanceLbl.Text = _user.CheckingAmount.ToString();
+            SavingsBalanceLbl.Text = _user.SavingsAmount.ToString();
+            
+            TotalBalanceLbl.Text = totalBal.ToString();
         }
     }
 }
