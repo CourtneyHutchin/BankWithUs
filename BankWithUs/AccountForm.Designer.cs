@@ -34,9 +34,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.TransferBtn = new System.Windows.Forms.Button();
+            this.DepositBtn = new System.Windows.Forms.Button();
+            this.LogoutBtn = new System.Windows.Forms.Button();
             this.AccountHolderInfoLbl = new System.Windows.Forms.Label();
             this.AccountNumLbl = new System.Windows.Forms.Label();
             this.TotalBalanceLbl = new System.Windows.Forms.Label();
@@ -100,35 +100,38 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Accounts:";
             // 
-            // button1
+            // TransferBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button1.Location = new System.Drawing.Point(432, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 39);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Transfer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.TransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.TransferBtn.Location = new System.Drawing.Point(432, 213);
+            this.TransferBtn.Name = "TransferBtn";
+            this.TransferBtn.Size = new System.Drawing.Size(251, 39);
+            this.TransferBtn.TabIndex = 6;
+            this.TransferBtn.Text = "Transfer";
+            this.TransferBtn.UseVisualStyleBackColor = true;
+            this.TransferBtn.Click += new System.EventHandler(this.TransferBtn_Click);
             // 
-            // button2
+            // DepositBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button2.Location = new System.Drawing.Point(432, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(251, 39);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Deposit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.DepositBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.DepositBtn.Location = new System.Drawing.Point(432, 159);
+            this.DepositBtn.Name = "DepositBtn";
+            this.DepositBtn.Size = new System.Drawing.Size(251, 39);
+            this.DepositBtn.TabIndex = 7;
+            this.DepositBtn.Text = "Deposit";
+            this.DepositBtn.UseVisualStyleBackColor = true;
+            this.DepositBtn.Click += new System.EventHandler(this.DepositBtn_Click);
             // 
-            // button3
+            // LogoutBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(49, 213);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 39);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Log Out";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LogoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LogoutBtn.Location = new System.Drawing.Point(49, 213);
+            this.LogoutBtn.Name = "LogoutBtn";
+            this.LogoutBtn.Size = new System.Drawing.Size(81, 39);
+            this.LogoutBtn.TabIndex = 8;
+            this.LogoutBtn.Text = "Log Out";
+            this.LogoutBtn.UseVisualStyleBackColor = true;
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
             // 
             // AccountHolderInfoLbl
             // 
@@ -196,9 +199,9 @@
             this.Controls.Add(this.TotalBalanceLbl);
             this.Controls.Add(this.AccountNumLbl);
             this.Controls.Add(this.AccountHolderInfoLbl);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LogoutBtn);
+            this.Controls.Add(this.DepositBtn);
+            this.Controls.Add(this.TransferBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -220,9 +223,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button TransferBtn;
+        private System.Windows.Forms.Button DepositBtn;
+        private System.Windows.Forms.Button LogoutBtn;
         private System.Windows.Forms.Label AccountHolderInfoLbl;
         private System.Windows.Forms.Label AccountNumLbl;
         private System.Windows.Forms.Label TotalBalanceLbl;

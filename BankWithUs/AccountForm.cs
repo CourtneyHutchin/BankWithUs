@@ -16,5 +16,39 @@ namespace BankWithUs
         {
             InitializeComponent();
         }
+
+        private void DepositBtn_Click(object sender, EventArgs e)
+        {
+            DepositForm depositForm = new DepositForm();
+            depositForm.Show();
+        }
+
+        private void TransferBtn_Click(object sender, EventArgs e)
+        {
+            TransferForm transferForm = new TransferForm();
+            transferForm.Show();
+        }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            string logoutMsg = "Are you sure you want to logout?";
+
+            DialogResult result = MessageBox.Show(caption: "Logout?",
+                                                  text: logoutMsg,
+                                                  buttons: MessageBoxButtons.YesNo,
+                                                  icon: MessageBoxIcon.Question);
+
+            if(result == DialogResult.Yes)
+            {
+                string thankYou = "Thank you for banking with us!";
+
+                DialogResult exit = MessageBox.Show(caption: thankYou,
+                                                    text: thankYou,
+                                                    buttons: MessageBoxButtons.OK);
+
+                Close();
+
+            }
+        }
     }
 }
