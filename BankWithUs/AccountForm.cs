@@ -65,8 +65,7 @@ namespace BankWithUs
             AccountNumLbl.Text = _user.AccountNum.ToString().Substring(6, 4);
             CheckingBalanceLbl.Text = "$" + _user.CheckingAmount.ToString();
             SavingsBalanceLbl.Text = "$" + _user.SavingsAmount.ToString();
-            
-            TotalBalanceLbl.Text = totalBal.ToString();
+            TotalBalanceLbl.Text = "$" + totalBal.ToString();
         }
     }
 }
