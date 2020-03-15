@@ -1,5 +1,7 @@
 # BankWithUs
 
+![.NET Framework](https://github.com/CourtneyHutchin/BankWithUs/workflows/.NET%20Framework/badge.svg)
+
 Description:
 - This is a team source control project, that simulates a bank account login and modification application. 
 - User's will be able login or register as a new user.
